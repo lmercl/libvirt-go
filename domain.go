@@ -1786,14 +1786,18 @@ func (d *Domain) BlockStats(path string) (*DomainBlockStats, error) {
 		return nil, makeError(&err)
 	}
 	return &DomainBlockStats{
-		WrReqSet:   true,
-		WrReq:      int64(cStats.wr_req),
-		RdReqSet:   true,
-		RdReq:      int64(cStats.rd_req),
-		RdBytesSet: true,
-		RdBytes:    int64(cStats.rd_bytes),
-		WrBytesSet: true,
-		WrBytes:    int64(cStats.wr_bytes),
+		WrReqSet:   		true,
+		WrReq:      		int64(cStats.wr_req),
+		RdReqSet:   		true,
+		RdReq:      		int64(cStats.rd_req),
+		RdBytesSet: 		true,
+		RdBytes:    		int64(cStats.rd_bytes),
+		WrBytesSet: 		true,
+		WrBytes:    		int64(cStats.wr_bytes),
+		FlushReqSet:		true,
+		FlushReq:		int64(cStats.flush_req),
+		FlushTotalTimesSet: 	true,
+		FlushTotalTimes:    	int64(cStats.flush_total_times),
 	}, nil
 }
 
