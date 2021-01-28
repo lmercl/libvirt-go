@@ -1795,7 +1795,7 @@ func (d *Domain) BlockStats(path string) (*DomainBlockStats, error) {
 		WrBytesSet: 		true,
 		WrBytes:    		int64(cStats.wr_bytes),
 		FlushReqSet:		true,
-		FlushReq:		int64(cStats.flush_req),
+		FlushReq:		int64(cStats.f_req),
 	}, nil
 }
 
